@@ -1,0 +1,5 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/02.BaseApp/beanconfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02.BaseApp/src/main/java/beanconfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02.BaseApp/src/main/java/demo/BaseApp/beanconfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/03.BaseAppAnotation/src/main/java/demo/BaseAppAnotation/beanconfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+eclipse.preferences.version=1

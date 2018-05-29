@@ -1,0 +1,49 @@
+package demo.SpringData;
+
+
+import javax.persistence.*;
+
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class EmployeeTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		
+		/*EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+		
+		EntityManager em = emf.createEntityManager();
+		EmployeeService service = new EmployeeService(em);*/
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("beanconfig.xml");
+	    EmployeeService service = ctx.getBean("service", EmployeeService.class);
+	    Address address = new Address(1,"Talwade");
+	    Department dept = new Department(1,"Java");
+	    Employee e1 = new Employee(123,"Meenal",50000,address,dept);
+	    Employee e2 = new Employee(123,"Hari",50000,address,dept);
+	    Employee e3 = new Employee(123,"Haneef",50000,address,dept);
+	    Employee e4 = new Employee(123,"RAMA",50000,address,dept);
+	    Employee e5 = new Employee(123,"Sagar",50000,address,dept);
+		   
+	    /* e.setName("Meenal");
+	    e.setAddress(address);
+	    e.setSalary(50000);
+	    e.setDept1(dept);*/
+	    service.createEmployee(e1);
+	    service.createEmployee(e2);
+	    service.createEmployee(e3);
+	    service.createEmployee(e4);
+	    service.createEmployee(e5);
+	    
+	    
+	    
+	    
+	    ctx.close();
+	}
+
+}

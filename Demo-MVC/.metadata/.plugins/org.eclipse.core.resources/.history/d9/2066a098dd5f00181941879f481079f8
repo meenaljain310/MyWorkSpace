@@ -1,0 +1,9 @@
+package com.cg;
+
+public class HelloController
+{
+	public String namaskar()
+	{
+		return "Namaskar";
+	}
+}

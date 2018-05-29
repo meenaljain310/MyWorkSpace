@@ -1,0 +1,15 @@
+package com.cg;
+
+import javax.xml.ws.RequestWrapper;
+
+import org.springframework.stereotype.Controller;
+@restController
+@Controller
+public class HelloController {
+
+	@requestMapping("/")
+	public String namaskar()
+	{
+		return "Namaskar from MVC";
+	}
+}

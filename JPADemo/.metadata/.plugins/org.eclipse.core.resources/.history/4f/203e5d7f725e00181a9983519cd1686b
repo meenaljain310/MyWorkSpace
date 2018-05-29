@@ -1,0 +1,5 @@
+package demo.SpringData;
+
+public interface EmployeeRepo {
+
+}

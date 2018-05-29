@@ -1,0 +1,33 @@
+package demo.corespring;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //System.out.println( "Hello World!" );
+    	//MessageService m1= new MessageService();
+    	//m1.printMessage();
+    	GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("demo/corespring/beanconfig.xml");
+    	MessageService service = ctx.getBean("msg",MessageService.class);
+    	MessageService service1 = ctx.getBean("msg",MessageService.class);
+    	/*System.out.println(service);
+    	System.out.println(service1);*/
+    	if (service==service1)
+    	{
+    		System.out.println("True");
+    		
+    	}
+    	else
+    		System.out.println("False");
+		
+    //	service.printMessage();
+    
+        
+    }
+}

@@ -1,0 +1,9 @@
+package demo.corespring;
+
+public class MessageService {
+public void printMessage() 
+{
+	System.out.println("Hello World  ");
+}
+
+}

@@ -1,0 +1,65 @@
+package demo.repo;
+
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import demo.beans.Customer;
+import demo.beans.Wallet;
+
+public class WalletRepoIMPL implements WalletRepo 
+{
+
+	protected EntityManager em;
+	
+	public WalletRepoIMPL(EntityManager em) {
+		
+		this.em = em;
+	}
+	
+	public boolean save(Customer c) 
+	{
+		String mobileNumber = c.getMobileNumber();
+		String name=c.getName();
+		float balance= c.getWallet().getBalance();
+		Wallet w=c.getWallet();
+		em.getTransaction().begin();
+		
+		c.setMobileNumber(mobileNumber);
+		c.setName(name);
+		w.setBalance(balance);
+		c.setWallet(w);
+		em.persist(c);
+		em.getTransaction().commit();
+
+		return true;
+		
+	}
+
+	public Customer findOne(String mobileNumber) 
+	{
+	
+	//	Customer c=em.find(Customer.class, id);
+		Query query = em.createQuery( "Select c from Customer c where c.mobileNumber = " + mobileNumber);
+	      
+		Customer c= (Customer)query.getSingleResult();
+	     
+		return c;
+		
+	}
+
+	@Override
+	public boolean update(String mobileNumber,float updatedBalance)
+	{
+		
+		Customer c =findOne(mobileNumber);
+		
+		em.getTransaction().begin();
+		
+		c.getWallet().setBalance(updatedBalance);
+		
+		em.getTransaction().commit();
+		return true;
+		
+	}
+}

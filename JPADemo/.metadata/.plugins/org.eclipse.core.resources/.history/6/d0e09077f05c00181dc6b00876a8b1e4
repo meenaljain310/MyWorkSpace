@@ -1,0 +1,5 @@
+package demo.OneToOne;
+
+public class Department {
+
+}

@@ -1,0 +1,26 @@
+package demo.client;
+import demo.repo.WalletRepo;
+import demo.service.*;
+public class WalletApp
+{
+	public static void main(String[] args) 
+	{	
+		WalletServiceImp account= new WalletServiceImp();
+		account.createAccount("meenal","9649658180",20000);
+		System.out.println(account.showBalance("9649658180"));
+		account.createAccount("Hari","7702508656",10000);
+	//	System.out.println(account.showBalance("9649658180"));
+		account.createAccount("Haneef","9649658180",20000);
+	//	System.out.println(account.showBalance("9649658180"));
+		account.createAccount("Vinayak","9649658180",20000);
+	//	System.out.println(account.showBalance("9649658180"));
+		account.createAccount("Amit","9649658180",50000);
+		System.out.println(account.showBalance("9649658180"));
+		System.out.println(account.showBalance("7702508656"));
+		
+		
+		
+		
+	
+	}
+}

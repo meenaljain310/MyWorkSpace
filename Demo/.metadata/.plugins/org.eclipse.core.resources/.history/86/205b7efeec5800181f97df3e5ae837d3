@@ -1,0 +1,5 @@
+package demo.corespring;
+
+public class Message {
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri May 25 11:49:50 IST 2018
+org.eclipse.jst.jee.server\:HelloWorldMVC=D\:\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\HelloWorldMVC
+org.eclipse.jst.jee.server\:/binary\:D\:\\Maven\\Repo\\org\\springframework\\spring-web\\5.0.6.RELEASE\\spring-web-5.0.6.RELEASE.jar=D\:\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\HelloWorldMVC\\WEB-INF\\lib\\spring-web-5.0.6.RELEASE.jar

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="03.BaseAppAnotation"/>
+<aop-project name="07.BaseAppSpringData"/>
+<aop-project name="05.BaseAppJDBC"/>
+<aop-project name="WalletSpringBoot"/>
+<aop-project name="08.WalletJPA"/>
+<aop-project name="04.BaseAppJavaConfig"/>
+</aop-reference-model>

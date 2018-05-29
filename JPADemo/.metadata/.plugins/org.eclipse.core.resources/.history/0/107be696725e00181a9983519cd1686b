@@ -1,0 +1,17 @@
+package demo.SpringData;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class EmployeeServiceImpl implements EmployeeService{
+		@Autowired
+		private EmployeeRepo repo;
+	public Employee createEmployee(Employee e) {
+		Employee e1= repo.save(e);
+		return e1;
+	}
+
+	public Employee findEmployee(int id) {
+		return repo.findOne(id);
+	}
+
+}
